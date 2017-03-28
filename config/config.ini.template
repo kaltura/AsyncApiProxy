@@ -1,0 +1,10 @@
+[logger]
+debugEnabled = 0
+logDir = @LOG_DIR@
+accessLogName = kaltura_async_proxy_access.log
+logName = kaltura_async_proxy.log
+errorLogName = kaltura_async_proxy_error.log
+
+[server]
+version = v1.0
+

@@ -1,0 +1,17 @@
+{
+	"name": "kaltura-async-proxy-server",
+	"description" : "Async Prxoy Server installation",
+	"version": "0.0.1",
+	"engines" : { "node" : ">=7.6.0" },
+	"dependencies": {
+		"forever": ">=0.14.1",
+		"node-ini": ">=1.0.0",
+		"cron": ">=1.2.1",
+    	        "continuation-local-storage": "^3.2.0"
+
+	},
+	"devDependencies": {
+		"chai": ">=3.5.0",
+		"mocha": ">=2.5.5"
+	}
+}
