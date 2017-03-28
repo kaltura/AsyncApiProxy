@@ -7,50 +7,41 @@ Machine prerequisites:
 
 Kaltura platform required changes:
 =======================
-- Please note that push-server needs version Lynx-12.11.0 at least for it to run. So if you are behind please update you Kaltura installation before continuing to any of the next steps.
-- update local.ini file and set the push_server_host value to point to your push server hostname.
-- make sure local.ini file and push-server's config.ini file contain the same configuration for both RabbitMQ and tokens (see below).
+- Please note that async-proxy-server needs version Lynx-12.14.0 at least for it to run. So if you are behind please update you Kaltura installation before continuing to any of the next steps.
 
 Repo:
 =======================
-https://github.com/kaltura/pub-sub-server
+https://github.com/kaltura/AsyncApiProxy
 
 Install:
 =======================
-- Clone https://github.com/kaltura/pub-sub-server to /opt/kaltura/pub-sub-server/master
-- Navigate to /opt/kaltura/pub-sub-server/master
+- Clone https://github.com/kaltura/AsyncApiProxy to /opt/kaltura/asyncProxyServer/master
+- Navigate to /opt/kaltura/asyncProxyServer/master
 - npm install
-- ln -s /opt/kaltura/pub-sub-server/master /opt/kaltura/pub-sub-server/latest
-- ln -s /opt/kaltura/pub-sub-server/latest/bin/push-server.sh /etc/init.d/kaltura_push
-- ln -s /opt/kaltura/pub-sub-server/latest/bin/upgrade-push-server.sh /etc/init.d/kaltura_upgrade_push_server
+- ln -s /opt/kaltura/asyncProxyServer/master /opt/kaltura/asyncProxyServer/latest
+- ln -s /opt/kaltura/asyncProxyServer/latest/bin/async-proxy-server.sh /etc/init.d/kaltura_async_proxy
+- ln -s /opt/kaltura/asyncProxyServer/latest/bin/upgrade-async-proxy-server.sh.sh /etc/init.d/kaltura_upgrade_async_proxy_server
 
 Configure:
 =======================
-- Create a log directory, e.g. mkdir /opt/kaltura/log/pub-sub-server
-- cp -p /opt/kaltura/pub-sub-server/latest/config/config.ini.template /opt/kaltura/pub-sub-server/latest/config/config.ini
+- Create a log directory, e.g. mkdir /opt/kaltura/log/asyncProxyServer
+- cp -p /opt/kaltura/asyncProxyServer/latest/config/config.ini.template /opt/kaltura/asyncProxyServer/latest/config/config.ini
 
 Replace tokens in config.ini file:
 =======================
 - @LOG_DIR@ - Your logs directory from previous step (e.g. /opt/kaltura/log )
-- @RABBIT_MQ_USERNAME@ - Username of admin access to RabbitMQ management console (should be the same as configured in rabbit_mq.ini file)
-- @RABBIT_MQ_PASSWORD@ - Password of admin access to RabbitMQ management console (should be the same as configured in rabbit_mq.ini file)
-- @RABBIT_MQ_SERVER_HOSTS@ - rabbit cluster url and port – e.g. http://ny-rabbit.kaltura.com:5672 
-- @SOCKET_IO_PORT@ - Required port for incoming requests to be given (e.g., 8081)
-- @TOKEN_KEY@ - The same secret value configured in local.ini file (push_server_secret)
-- @TOKEN_IV@ - The same iv value configured in local.ini file (push_server_secret_iv)
-- @QUEUE_NAME@ - unique queueName as defined in rabbitMQ
 
-Modify tokens bin/push-server.sh file:
+Modify tokens bin/async-proxy-server.sh file:
 =======================
-make sure that PUB_SUB_PATH and LOG_PATH are pointing to the correct paths
+make sure that ASYNC_PROXY_PATH and LOG_PATH are pointing to the correct paths
 
 Execution:
 =======================
-/etc/init.d/kaltura_push start
+/etc/init.d/kaltura_async_proxy start
 
 Upgrade:
 =======================
-- run /etc/init.d/kaltura_upgrade_push_server @RELEASE_ID@
-- Example to upgrade to 1.0 you need to execute: /etc/init.d/kaltura_upgrade_push_server 1.0
+- run /etc/init.d/kaltura_upgrade_async_proxy_server @RELEASE_ID@
+- Example to upgrade to 1.0 you need to execute: /etc/init.d/kaltura_upgrade_async_proxy_server 1.0
 - The upgrade will sync all the configuration files and will restart the service.
-- Make sure that tokens in bin/push-server.sh file (PUB_SUB_PATH and LOG_PATH) are pointing to the correct paths
+- Make sure that tokens in bin/push-server.sh file (ASYNC_PROXY_PATH and LOG_PATH) are pointing to the correct paths
