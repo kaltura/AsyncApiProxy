@@ -1,9 +1,9 @@
-## pub-sub-server
+## async-proxy-server
 
-Kaltura 'pub-sub-server' manages all clients' web sockets in order to receive pushed data. Basically, it's a part of a larger message-oriented middleware system, maintained by Kaltura's server (the Push Event Notification Plugin). Client can register to event (using the push plugin), and once the event occurs, it will be pushed into a queue. The push-server provides listener to this queue, so that the client will receive the object directly through the web socket (socket io implementation) into their application.
+Kaltura 'async-proxy-server' manages clients' api calls and forward them to kaltura api server in a speficic pase. Basically, This server is designed to cache api calls they are being call by same client constantly and handle to modes: aggregate a count for a specific call or hold only the last state of a specific call. After a TTL has passed the cached call should be sent to api server with the current data.
 
 ### Deployment
-Please refer to [deployment document] (https://github.com/kaltura/pub-sub-server/blob/master/pub_sub_server_deployment.md)
+Please refer to [deployment document] (https://github.com/kaltura/AsyncApiProxy/blob/master/async_proxy_server_deployment.md)
 
 ### Copyright & License
 
