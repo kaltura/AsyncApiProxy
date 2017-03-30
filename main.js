@@ -11,7 +11,6 @@ KalturaMainProcess.prototype.start = function () {
 
 	this.namespace = continuationLocalStorage.createNamespace('async-proxy-server');//Here just to make sure we create it only once
 	var server = new AsyncProxyManager();
-	server.startServer();
 
 	process.on('SIGUSR1', function() {
 		KalturaLogger.log('Got SIGUSR1. Invoke log rotate notification.');
