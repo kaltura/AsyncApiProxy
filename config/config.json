@@ -1,17 +1,51 @@
 {
-  logger: {
-    debugEnabled: 0,
-    logDir: '@LOG_DIR@',
-    accessLogName: 'kaltura_async_proxy_access.log',
-    logName: 'kaltura_async_proxy.log',
-    errorLogName: 'kaltura_async_proxy_error.log'
+  "logger": {
+    "debugEnabled": 0,
+    "logDir": "@LOG_DIR@",
+    "accessLogName": "kaltura_async_proxy_access.log",
+    "logName": "kaltura_async_proxy.log",
+    "errorLogName": "kaltura_async_proxy_error.log"
   },
-  server: {
-    version: 'v1.0'
+  "server": {
+    "version": "v1.0"
   },
-  cloud: {
-   requestTimeout: 100000,
-    httpPort: 8080,
-    httpsPort: 443
-  }
+  "cloud": {
+    "requestTimeout": 100000,
+    "httpPort": 8080,
+    "httpsPort": 443
+  },
+  "handlers": [
+    //history example
+    {
+      "indentifiers": [
+        {
+          "Key": "Service",
+          "value": "userEntry"
+        },
+        {
+          "Key": "action",
+          "value": "update"
+        }
+      ],
+      "cacheKeys": "cuepointId,userEntry",
+      "ttl": 30,
+      "extendTtl": true
+    },
+    //aggregation example
+    {
+      "indentifiers": [
+        {
+          "Key": "Service",
+          "value": "Cuepoint"
+        },
+        {
+          "Key": "action",
+          "value": "update"
+        }
+      ],
+      "cacheKeys": "cuepointId, partnerId",
+      "ttl": 30,
+      "extendTtl": false
+    }
+  ]
 }
