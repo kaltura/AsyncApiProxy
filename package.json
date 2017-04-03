@@ -13,7 +13,8 @@
 		"express": ">=4.15.2",
 		"body-parser": ">=1.17.1",
 		"node-uuid": ">=1.4.8",
-		"request": ">=2.81.0"
+		"request": ">=2.81.0",
+		"memory-cache": ">=0.1.6"
 	},
 	"devDependencies": {
 		"chai": ">=3.5.0",
