@@ -1,7 +1,7 @@
 {
   "logger": {
     "debugEnabled": 0,
-    "logDir": "/Users/yossi.papiashvili/git/logs/AsyncProxyServer",
+    "logDir": "/opt/kaltura/log",
     "accessLogName": "kaltura_async_proxy_access.log",
     "logName": "kaltura_async_proxy.log",
     "errorLogName": "kaltura_async_proxy_error.log"
@@ -16,7 +16,7 @@
   "cloud": {
     "requestTimeout": 100000,
     "httpPort": 8080,
-    "httpsPort": 8088
+    "httpsPort": 443
   },
   
   "throttle": {
