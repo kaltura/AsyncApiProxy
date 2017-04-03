@@ -1,30 +1,33 @@
 {
   "logger": {
     "debugEnabled": 0,
-    "logDir": "/opt/kaltura/log",
-    "accessLogName": "kaltura_async_proxy_access.log",
+    "logDir": "@LOG_DIR@",
     "logName": "kaltura_async_proxy.log",
+    "accessLogName": "kaltura_async_proxy_access.log",
     "errorLogName": "kaltura_async_proxy_error.log"
   },
-  
+
   "server": {
     "version": "v1.0"
   },
-  
-  "destinationHost": "www.kaltura.com",
-  
+
+  "cdn_api_host": {
+    "cdn_api_host": "@WWW_HOST@",
+    "cdn_api_host_https": "@WWW_HOST@"
+  },
+
   "cloud": {
     "requestTimeout": 100000,
-    "httpPort": 8080,
-    "httpsPort": 443
+    "httpPort": "@http_port@",
+    "httpsPort": "@https_port@"
   },
-  
+
   "throttle": {
     //example - 10 messages per second will be [messagePerTimePeriod:10 , timePeriod: 1000]
     "messagePerTimePeriod": 10,
     "timePeriod": 1000
   },
-  
+
   "handlers": [
     //history example
     {
@@ -39,7 +42,7 @@
 
     {
       "identifier": {
-        "service": "cuepoint_cuepoint", 
+        "service": "cuepoint_cuepoint",
         "action": "update"
       },
       "cacheKeyParams": ["id"],
