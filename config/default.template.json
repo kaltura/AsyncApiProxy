@@ -8,7 +8,8 @@
   },
 
   "server": {
-    "version": "v1.0"
+    "version": "v1.0",
+    "ipSalt": "@remote_addr_header_salt@"
   },
 
   "cdn_api_host": {
