@@ -1,9 +1,9 @@
 {
   "logger": {
     "debugEnabled": 0,
-    "logDir": "/opt/kaltura/log",
-    "accessLogName": "kaltura_async_proxy_access.log",
+    "logDir": "@LOG_DIR@",
     "logName": "kaltura_async_proxy.log",
+    "accessLogName": "kaltura_async_proxy_access.log",
     "errorLogName": "kaltura_async_proxy_error.log"
   },
 
@@ -12,14 +12,14 @@
   },
 
   "cdn_api_host": {
-    "cdn_api_host": "http://127.0.0.1/api_v3/service/system/action/ping",
-    "cdn_api_host_https": "https://127.0.0.1/api_v3/service/system/action/ping"
+    "cdn_api_host": "@WWW_HOST@",
+    "cdn_api_host_https": "@WWW_HOST@"
   },
 
   "cloud": {
     "requestTimeout": 100000,
-    "httpPort": 8080,
-    "httpsPort": 443
+    "httpPort": "@http_port@",
+    "httpsPort": "@https_port@"
   },
 
   "throttle": {
@@ -48,7 +48,7 @@
       },
       "cacheKeyParams": ["id"],
       //ttl in milliseconds
-      "ttl": 20000,
+      "ttl": 2000,
       "extendTtl": false
     }
   ]
