@@ -10,9 +10,12 @@
   "server": {
     "version": "v1.0"
   },
-  
-  "destinationHost": "www.kaltura.com",
-  
+
+  "cdn_api_host": {
+    "cdn_api_host": "http://www.kaltura.com",
+    "cdn_api_host_https": "https://www.kaltura.com"
+  },
+
   "cloud": {
     "requestTimeout": 100000,
     "httpPort": 8080,
@@ -24,7 +27,7 @@
     "messagePerTimePeriod": 10,
     "timePeriod": 1000
   },
-  
+
   "handlers": [
     //history example
     {
@@ -33,18 +36,19 @@
         "action": "update"
       },
       "cacheKeyParams": ["cuepointId,userEntry"],
-      "ttl": 30,
+      "ttl": 30000,
       "extendTtl": true
     },
 
     {
       "identifier": {
-        "service": "cuepoint_cuepoint", 
+        "service": "cuepoint_cuepoint",
         "action": "update"
       },
       "cacheKeyParams": ["id"],
-      "ttl": 30,
-      "extendTtl": true
+      //ttl in milliseconds
+      "ttl": 2000,
+      "extendTtl": false
     }
   ]
 }

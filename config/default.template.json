@@ -36,7 +36,8 @@
         "action": "update"
       },
       "cacheKeyParams": ["cuepointId,userEntry"],
-      "ttl": 30,
+      //ttl in milliseconds
+      "ttl": 30000,
       "extendTtl": true
     },
 
@@ -46,8 +47,9 @@
         "action": "update"
       },
       "cacheKeyParams": ["id"],
-      "ttl": 30,
-      "extendTtl": true
+      //ttl in milliseconds
+      "ttl": 2000,
+      "extendTtl": false
     }
   ]
 }
