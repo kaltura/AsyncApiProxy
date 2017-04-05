@@ -4,7 +4,7 @@ const continuationLocalStorage = require('continuation-local-storage');
 const KalturaAsyncProxyServerValidator = require('./lib/utils/KalturaAsyncProxyServerValidator');
 
 function KalturaMainProcess(){
-this.start();
+	this.start();
 };
 
 KalturaMainProcess.prototype.start = function () {
