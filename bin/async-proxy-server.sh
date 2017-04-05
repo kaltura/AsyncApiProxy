@@ -21,8 +21,8 @@ echo `date`
 ### END INIT INFO
  
 NAME="async_proxy_server"
-ASYNC_PROXY_PATH="/opt/kaltura/asyncProxyServer/latest"
-LOG_PATH="/opt/kaltura/log"
+ASYNC_PROXY_PATH="asyncProxyServer"
+LOG_PATH="/opt/kaltua/log"
 NODE_PATH=$ASYNC_PROXY_PATH"/node_modules"
 APPLICATION_PATH=$ASYNC_PROXY_PATH"/main.js"
 PIDFILE=$ASYNC_PROXY_PATH"/config/asynce-proxy-server.pid"

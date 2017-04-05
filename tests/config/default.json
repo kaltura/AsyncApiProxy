@@ -1,7 +1,7 @@
 {
   "logger": {
     "debugEnabled": 0,
-    "logDir": "/opt/kaltura/log",
+    "logDir": "log",
     "accessLogName": "kaltura_async_proxy_access.log",
     "logName": "kaltura_async_proxy.log",
     "errorLogName": "kaltura_async_proxy_error.log"
