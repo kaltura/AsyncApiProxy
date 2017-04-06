@@ -12,7 +12,7 @@
   },
 
   "cdn_api_host": {
-    "cdn_api_host": "http://127.0.0.1/api_v3/service/system/action/ping",
+    "cdn_api_host_http": "http://127.0.0.1/api_v3/service/system/action/ping",
     "cdn_api_host_https": "https://127.0.0.1/api_v3/service/system/action/ping"
   },
 
