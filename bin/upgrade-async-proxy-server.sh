@@ -1,9 +1,9 @@
 #!/bin/bash
-# For upgrade just type ./upgradePubSubServer <version>
+# For upgrade just type ./upgrade-async-proxy-server.sh <version>
 # This uploads NVM
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" || (echo "nvm not found in $NVM_DIR, nvm is required to continue, Exiting!!!" ; exit 1 )
 
-##### Navigate to push server directory #####
+##### Navigate to async proxy server directory #####
 cd /opt/kaltura/asyncProxyServer/
 echo updating async-proxy-server to version $1
 

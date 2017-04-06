@@ -7,17 +7,17 @@
 echo `date`
 
 #
-# push-server              This shell script takes care of starting and stopping a Kaltura push-server Service
+# This shell script takes care of starting and stopping a Kaltura Async-api-proxy Service
 #
-# description: Kaltura push-server
+# description: Kaltura Async-api-proxy
 
 ### BEGIN INIT INFO
 # Required-Start:    $local_fs $remote_fs $network
 # Required-Stop:     $local_fs $remote_fs $network
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: Start/stop Kaltura push-server
-# Description:       Control the Kaltura push-server.
+# Short-Description: Start/stop Kaltura Async-api-proxy.
+# Description:       Control the Kaltura Async-api-proxy.
 ### END INIT INFO
  
 NAME="async_proxy_server"
@@ -61,6 +61,7 @@ stop() {
 }
  
 restart() {
+	echo -n "Restarting $NAME"
     stop
     start
 }
