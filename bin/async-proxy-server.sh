@@ -32,6 +32,7 @@ SPIN_SLEEP_TIME="2000"
  
 PATH=$NODE_BIN_DIR:$PATH
 export NODE_PATH=$NODE_PATH
+export NODE_CONFIG_DIR=$ASYNC_PROXY_PATH"/config"
  
 start() {
     echo "Starting $NAME"
