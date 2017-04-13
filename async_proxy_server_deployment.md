@@ -29,7 +29,7 @@ Configure:
 
 Replace tokens in config.ini file:
 =======================
-- @LOG_DIR@ - Your logs directory from previous step (e.g. /opt/kaltura/log )
+- @LOG_DIR@ - Your logs directory from previous step (e.g. /var/log/kAsyncProxy/ )
 
 Modify tokens bin/async-proxy-server.sh file:
 =======================
