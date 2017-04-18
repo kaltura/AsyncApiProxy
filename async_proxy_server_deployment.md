@@ -20,8 +20,8 @@ Install:
 - npm install
 - npm install -g forever
 - ln -s /opt/kaltura/asyncProxyServer/master /opt/kaltura/asyncProxyServer/latest
-- ln -s /opt/kaltura/asyncProxyServer/latest/bin/async-proxy-server.sh /etc/init.d/kaltura_async_proxy
-- ln -s /opt/kaltura/asyncProxyServer/latest/bin/upgrade-async-proxy-server.sh.sh /etc/init.d/kaltura_upgrade_async_proxy_server
+- ln -s /opt/kaltura/asyncProxyServer/latest/bin/async-proxy-server.sh /etc/init.d/kaltura-async-proxy
+- ln -s /opt/kaltura/asyncProxyServer/latest/bin/upgrade-async-proxy-server.sh.sh /etc/init.d/kaltura-upgrade-async-proxy-server
 
 Configure:
 =======================
