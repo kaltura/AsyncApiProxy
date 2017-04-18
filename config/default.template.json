@@ -14,8 +14,8 @@
   },
 
   "cdn_api_host": {
-    "cdn_api_host_http": "@WWW_HOST@",
-    "cdn_api_host_https": "@WWW_HOST@"
+    "cdn_api_host_http": "@WWW_HOST@/api_v3/",
+    "cdn_api_host_https": "@WWW_HOST@/api_v3/"
   },
 
   "cloud": {
