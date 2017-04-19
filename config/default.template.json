@@ -14,8 +14,8 @@
   },
 
   "cdn_api_host": {
-    "cdn_api_host_http": "@WWW_HOST@",
-    "cdn_api_host_https": "@WWW_HOST@"
+    "cdn_api_host_http": "@WWW_HOST@/api_v3/",
+    "cdn_api_host_https": "@WWW_HOST@/api_v3/"
   },
 
   "cloud": {
@@ -34,10 +34,10 @@
     //history example
     {
       "identifier": {
-        "service": "userEntry",
+        "service": "userentry",
         "action": "update"
       },
-      "cacheKeyParams": ["cuepointId,userEntry"],
+      "cacheKeyParams": ["id","userEntry:entryId"],
       //ttl in milliseconds
       "ttl": 30000,
       "extendTtl": true
