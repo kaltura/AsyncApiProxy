@@ -3,13 +3,10 @@
 # An init.d script for running a Node.js process as a service using Forever as
 # the process monitor. For more configuration options associated with Forever,
 # see: https://github.com/nodejitsu/forever
-
-echo `date`
-
 #
 # This shell script takes care of starting and stopping a Kaltura Async-api-proxy Service
 #
-# description: Kaltura Async-api-proxy
+# description: Kaltura async API proxy server
 
 ### BEGIN INIT INFO
 # Required-Start:    $local_fs $remote_fs $network
@@ -20,11 +17,11 @@ echo `date`
 # Description:       Control the Kaltura Async-api-proxy.
 ### END INIT INFO
  
-NAME="async_proxy_server"
-ASYNC_PROXY_PATH="/opt/kaltura/asyncProxyServer/latest"
+NAME="Kaltura Async API Proxy Server"
+ASYNC_PROXY_PATH="@ASYNC_API_PROXY_PREFIX@"
 LOG_PATH="@LOG_DIR@"
 NODE_PATH=$ASYNC_PROXY_PATH"/node_modules"
-APPLICATION_PATH=$ASYNC_PROXY_PATH"/main.js"
+APPLICATION_PATH=`realpath $ASYNC_PROXY_PATH"/main.js"`
 PIDFILE=$ASYNC_PROXY_PATH"/config/asynce-proxy-server.pid"
 LOGFILE=$LOG_PATH"/async-proxy-server.log"
 MIN_UPTIME="5000"
@@ -33,7 +30,12 @@ SPIN_SLEEP_TIME="2000"
 PATH=$NODE_BIN_DIR:$PATH
 export NODE_PATH=$NODE_PATH
 export NODE_CONFIG_DIR=$ASYNC_PROXY_PATH"/config"
- 
+if [ ! -x "`which forever 2>/dev/null`" ];then
+    echo "Need to install the forever npm module. Exiting."
+    exit 2
+fi
+
+
 start() {
     echo "Starting $NAME"
     forever \
@@ -68,7 +70,7 @@ restart() {
 }
  
 status() {
-    echo `forever list` | grep -q "$APPLICATION_PATH"
+    forever list | grep -q "$APPLICATION_PATH"
     if [ "$?" -eq "0" ]; then
         echo "$NAME is running."
         RETVAL=0
@@ -76,18 +78,18 @@ status() {
         echo "$NAME is not running."
         RETVAL=3
     fi
-	return $RETVAL
+    return $RETVAL
 }
 
 logRotated() {
-        if [ -f $PIDFILE ]; then
-                echo "Notify log rotate for $NAME."
-                kill -USR1 `cat $PIDFILE`
-                RETVAL=1
-        else
-                echo "$NAME is not running."
-                RETVAL=0
-        fi
+    if status; then
+	echo "Notify log rotate for $NAME."
+	kill -USR1 `cat $PIDFILE`
+	RETVAL=1
+    else
+	echo "$NAME is not running."
+	RETVAL=0
+    fi
 }
  
 case "$1" in
@@ -105,7 +107,7 @@ case "$1" in
     restart)
         restart
         ;;
- 	logRotated)
+    logRotated)
         logRotated
         ;;
 
