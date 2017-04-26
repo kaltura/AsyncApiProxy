@@ -18,13 +18,9 @@ The Async API Proxy Server requires [Kaltura Server](https://github.com/kaltura/
 ## Configuration
 1. Create a log directory (mkdir /opt/kaltura/log/asyncProxyServer)
 2. ln -s /opt/kaltura/asyncProxyServer/master /opt/kaltura/asyncProxyServer/latest
-    
 3. cp -p /opt/kaltura/asyncProxyServer/latest/config/default.template.json /opt/kaltura/asyncProxyServer/latest/config/default.json
 4. cp -p /opt/kaltura/asyncProxyServer/latest/bin/async-proxy-server.template.sh /opt/kaltura/asyncProxyServer/latest/bin/async-proxy-server.sh
-    
 5. ln -s /opt/kaltura/asyncProxyServer/latest/bin/async-proxy-server.sh /etc/init.d/kaltura_async_proxy
-6. ln -s /opt/kaltura/asyncProxyServer/latest/bin/upgrade-async-proxy-server.sh.sh /etc/init.d/kaltura_upgrade_async_proxy_server
-
 7. Replace the following tokens in default.json:
 ```
 @LOG_DIR@ - Your logs directory
@@ -42,13 +38,16 @@ The Async API Proxy Server requires [Kaltura Server](https://github.com/kaltura/
 
 9. Start the server:
 ```
-/etc/init.d/kaltura_async_proxy start
+# /etc/init.d/kaltura_async_proxy start
 ```
 You may also want to call chkconfig or update-rc.d so the daemon will be started during system init and stopped during shutdown.
 
 ## Upgrading
-run /etc/init.d/kaltura_upgrade_async_proxy_server @RELEASE_ID@
-Example to upgrade to 1.0 you need to execute: /etc/init.d/kaltura_upgrade_async_proxy_server 1.0
+run kaltura_upgrade_async_proxy_server @RELEASE_ID@
+For example, to upgrade to 1.0 you need to execute: 
+```
+# kaltura_upgrade_async_proxy_server 1.0
+```
 
 The upgrade will sync all the configuration files and will restart the service.
 Make sure that tokens in bin/async-proxy-server.sh file (ASYNC_PROXY_PATH and LOG_PATH) are pointing to the correct paths
