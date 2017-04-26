@@ -1,4 +1,4 @@
-# Async API Proxy Server (https://github.com/kaltura/AsyncApiProxy) Deployment Instructions
+# [Async API Proxy Server](https://github.com/kaltura/AsyncApiProxy) Deployment Instructions
 
 ## Machine Prerequisites
 - Node 7.6.0 or above: installation reference: https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager#ubuntu-mint-elementary-os
