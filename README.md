@@ -1,6 +1,12 @@
-## async-proxy-server
+# Async API Proxy Server
 
-Kaltura 'async-proxy-server' manages clients' api calls and forward them to kaltura api server in a speficic pase. Basically, This server is designed to cache api calls they are being call by same client constantly and handle to modes: aggregate a count for a specific call or hold only the last state of a specific call. After a TTL has passed the cached call should be sent to api server with the current data.
+The goal of this server is to cache API calls made by clients and only forward them to the Kaltura Server when certain conditions are met.
+
+## Main features:
+- Matches API calls against configuration templates to determine how they should be handled  
+- Supports different request types and response formats
+- Upon TTL expiry, will purge the cached API call and send it to the Kaltura server
+- Stores the sender IP as set in the for x-Forwarded-for header (only for ‘latest’ type of messages, not aggregation)
 
 ### Deployment
 Please refer to [deployment document] (https://github.com/kaltura/AsyncApiProxy/blob/master/async_proxy_server_deployment.md)
