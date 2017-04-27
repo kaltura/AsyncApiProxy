@@ -3,6 +3,7 @@
 	"description" : "Async Prxoy Server installation",
 	"version": "1.0.0",
 	"engines" : { "node" : ">=6.10.2" },
+	"license": "AGPLv3",
 	"dependencies": {
 		"config": ">=1.25.1",
 		"simple-rate-limiter": ">=0.2.3",
