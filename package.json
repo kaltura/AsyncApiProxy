@@ -12,6 +12,7 @@
 		"body-parser": ">=1.17.1",
 		"node-uuid": ">=1.4.8",
 		"request": ">=2.81.0",
+		"crypto": ">=0.0.3",
 	  	"is-subset": ">=0.1.1",
 	  	"bluebird": ">=3.5.0",
 	  	"memory-cache": ">=0.1.6",
