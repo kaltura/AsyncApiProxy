@@ -1,6 +1,6 @@
 {
 	"name": "kaltura-async-proxy-server",
-	"description" : "Async Prxoy Server installation",
+	"description" : "Kaltura Async API Proxy Server",
 	"version": "1.0.0",
 	"engines" : { "node" : ">=6.10.2" },
 	"license": "AGPLv3",
