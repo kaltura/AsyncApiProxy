@@ -16,7 +16,7 @@ The Async API Proxy Server requires [Kaltura Server](https://github.com/kaltura/
 4. npm install -g forever
 
 ## Configuration
-1. Create a log directory (mkdir /opt/kaltura/log/asyncProxyServer)
+1. Create a log directory (mkdir /opt/kaltura/log/AsyncApiProxy)
 2. ln -s /opt/kaltura/AsyncApiProxy/master /opt/kaltura/AsyncApiProxy/latest
 3. cp -p /opt/kaltura/AsyncApiProxy/latest/config/default.template.json /opt/kaltura/AsyncApiProxy/latest/config/default.json
 4. cp -p /opt/kaltura/AsyncApiProxy/latest/bin/async-proxy-server.template.sh /opt/kaltura/AsyncApiProxy/latest/bin/async-proxy-server.sh
