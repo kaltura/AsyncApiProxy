@@ -42,6 +42,9 @@ The Async API Proxy Server requires [Kaltura Server](https://github.com/kaltura/
 # /etc/init.d/kaltura_async_proxy start
 ```
 You may also want to call chkconfig or update-rc.d so the daemon will be started during system init and stopped during shutdown.
+```
+# update-rc.d kaltura_async_proxy defaults
+```
 
 ## Upgrading
 Run ```kaltura_upgrade_async_proxy_server @RELEASE_ID@```
