@@ -9,12 +9,13 @@
 # description: Kaltura async API proxy server
 
 ### BEGIN INIT INFO
-# Required-Start:    $local_fs $remote_fs $network
-# Required-Stop:     $local_fs $remote_fs $network
-# Default-Start:     2 3 4 5
-# Default-Stop:      0 1 6
-# Short-Description: Start/stop Kaltura Async-api-proxy.
-# Description:       Control the Kaltura Async-api-proxy.
+# Provides:             kaltura_async_proxy
+# Required-Start:    	$local_fs $remote_fs $network
+# Required-Stop:     	$local_fs $remote_fs $network
+# Default-Start:     	2 3 4 5
+# Default-Stop:      	0 1 6
+# Short-Description: 	Start/stop Kaltura Async-api-proxy.
+# Description:       	Control the Kaltura Async-api-proxy.
 ### END INIT INFO
  
 NAME="Kaltura Async API Proxy Server"
@@ -22,7 +23,7 @@ ASYNC_PROXY_PATH="@ASYNC_API_PROXY_PREFIX@"
 LOG_PATH="@LOG_DIR@"
 NODE_PATH=$ASYNC_PROXY_PATH"/node_modules"
 APPLICATION_PATH=`realpath $ASYNC_PROXY_PATH"/main.js"`
-PIDFILE=$ASYNC_PROXY_PATH"/config/asynce-proxy-server.pid"
+PIDFILE=$ASYNC_PROXY_PATH"/config/async-proxy-server.pid"
 LOGFILE=$LOG_PATH"/async-proxy-server.log"
 MIN_UPTIME="5000"
 SPIN_SLEEP_TIME="2000"
