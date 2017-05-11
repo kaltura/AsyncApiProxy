@@ -9,7 +9,7 @@
 # description: Kaltura async API proxy server
 
 ### BEGIN INIT INFO
-# Provides:             kaltura_async_proxy
+# Provides:				kaltura_async_proxy
 # Required-Start:    	$local_fs $remote_fs $network
 # Required-Stop:     	$local_fs $remote_fs $network
 # Default-Start:     	2 3 4 5
