@@ -10,12 +10,12 @@
 
 ### BEGIN INIT INFO
 # Provides:				kaltura_async_proxy
-# Required-Start:    	$local_fs $remote_fs $network
-# Required-Stop:     	$local_fs $remote_fs $network
-# Default-Start:     	2 3 4 5
-# Default-Stop:      	0 1 6
-# Short-Description: 	Start/stop Kaltura Async-api-proxy.
-# Description:       	Control the Kaltura Async-api-proxy.
+# Required-Start:		$local_fs $remote_fs $network
+# Required-Stop:		$local_fs $remote_fs $network
+# Default-Start:		2 3 4 5
+# Default-Stop:			0 1 6
+# Short-Description:	Start/stop Kaltura Async-api-proxy.
+# Description:			Control the Kaltura Async-api-proxy.
 ### END INIT INFO
  
 NAME="Kaltura Async API Proxy Server"
