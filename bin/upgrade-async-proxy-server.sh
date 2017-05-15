@@ -28,6 +28,8 @@ if [ ! -d "$1" ] ; then
         
         ##### Copy config file from previous latest dir to the current version being installed ##### 
         cp -p /opt/kaltura/asyncProxyServer/latest/config/config.ini /opt/kaltura/asyncProxyServer/$1/config/config.ini
+        ##### Copy sh file from previous latest dir to the current version being installed ##### 
+        cp -p /opt/kaltura/asyncProxyServer/latest/bin/async-proxy-server.sh /opt/kaltura/asyncProxyServer/$1/bin/async-proxy-server.sh
         
         ##### Unlink previous version ##### 
         unlink /opt/kaltura/asyncProxyServer/latest
