@@ -37,7 +37,7 @@
         "service": "userentry",
         "action": "update"
       },
-      "cacheKeyParams": ["id","userEntry:entryId"],
+      "cacheKeyParams": ["id"],
       //ttl in milliseconds
       "ttl": 30000,
       "extendTtl": true
