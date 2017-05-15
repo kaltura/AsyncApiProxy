@@ -9,7 +9,7 @@ The goal of this server is to cache API calls made by clients and only forward t
 - Stores the sender IP as set in the for x-Forwarded-for header (only for ‘latest’ type of messages, not aggregation)
 
 ### Deployment
-Please refer to [deployment document] (https://github.com/kaltura/AsyncApiProxy/blob/master/async_proxy_server_deployment.md)
+Please refer to [deployment document](async_proxy_server_deployment.md)
 
 ### Copyright & License
 
