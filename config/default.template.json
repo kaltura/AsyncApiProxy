@@ -20,8 +20,10 @@
 
   "cloud": {
     "requestTimeout": 100000,
-    "httpPort": "@HTTP_PORT@",
-    "httpsPort": "@HTTPS_PORT@"
+    "httpPort1": "@HTTP_PORT1@"
+    //"httpPort2": "@HTTP_PORT2@",
+    "httpsPort1": "@HTTPS_PORT1@"
+//    "httpsPort2": "@HTTPS_PORT2@",
   },
 
   "throttle": {

@@ -27,7 +27,7 @@ if [ ! -d "$1" ] ; then
         cd ..
         
         ##### Copy config file from previous latest dir to the current version being installed ##### 
-        cp -p /opt/kaltura/asyncProxyServer/latest/config/config.ini /opt/kaltura/asyncProxyServer/$1/config/config.ini
+        cp -p /opt/kaltura/asyncProxyServer/latest/config/default.json /opt/kaltura/asyncProxyServer/$1/config/default.json
         ##### Copy sh file from previous latest dir to the current version being installed ##### 
         cp -p /opt/kaltura/asyncProxyServer/latest/bin/async-proxy-server.sh /opt/kaltura/asyncProxyServer/$1/bin/async-proxy-server.sh
         
