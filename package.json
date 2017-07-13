@@ -3,7 +3,11 @@
 	"description" : "Kaltura Async API Proxy Server",
 	"version": "v1.0.9",
 	"engines" : { "node" : ">=6.10.2" },
-	"license": "AGPLv3",
+	"license": "AGPL-3.0",
+	"repository": {
+	    "type": "git",
+	    "url": "git+https://github.com/kaltura/AsyncApiProxy.git"
+	 },
 	"dependencies": {
 		"config": ">=1.25.1",
 		"os": ">=0.1.1",
