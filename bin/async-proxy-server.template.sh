@@ -21,7 +21,7 @@
 NAME="Kaltura Async API Proxy Server"
 ASYNC_PROXY_PATH="@ASYNC_API_PROXY_PREFIX@"
 LOG_PATH="@LOG_DIR@"
-NODE_PATH=$ASYNC_PROXY_PATH"/node_modules"
+NODE_PATH="@NODE_MODULES_PATH@"
 APPLICATION_PATH=`readlink -e $ASYNC_PROXY_PATH"/main.js"`
 PIDFILE=$ASYNC_PROXY_PATH"/config/async-proxy-server.pid"
 LOGFILE=$LOG_PATH"/async-proxy-server.log"
@@ -29,8 +29,9 @@ MIN_UPTIME="5000"
 SPIN_SLEEP_TIME="2000"
  
 PATH=$NODE_BIN_DIR:$PATH
-export NODE_PATH=$NODE_PATH
+export NODE_PATH
 export NODE_CONFIG_DIR=$ASYNC_PROXY_PATH"/config"
+
 if [ ! -x "`which forever 2>/dev/null`" ];then
     echo "Need to install the forever npm module. Exiting."
     exit 2
