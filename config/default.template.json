@@ -65,7 +65,10 @@
       //ttl in milliseconds
       "ttl": 10000,
       "extendTtl": true,
-      "sendBeforeCaching": true,
+      "preCacheSendSetting": {
+        "sendBeforeCaching" : true,
+        "sendExtraParams" : false
+      },
       "requestExtraParams": {
         "status": "4"
       }
