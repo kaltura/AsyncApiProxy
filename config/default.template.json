@@ -54,6 +54,21 @@
       //ttl in milliseconds
       "ttl": 2000,
       "extendTtl": false
+    },
+
+    {
+      "identifier": {
+        "service": "servernode",
+        "action": "reportStatus"
+      },
+      "cacheKeyParams": ["hostName"],
+      //ttl in milliseconds
+      "ttl": 10000,
+      "extendTtl": true,
+      "sendBeforeCaching": true,
+      "requestExtraParams": {
+        "status": "4"
+      }
     }
   ]
 }
