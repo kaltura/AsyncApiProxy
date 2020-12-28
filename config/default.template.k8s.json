@@ -8,7 +8,7 @@
   },
 
   "server": {
-    "version": "v1.0.0",
+    "version": "v1.1.1",
     "remote_addr_header_salt": "{{ .Values.async.remoteAddrHeaderSalt }}",
     "remote_addr_header_timeout": 120
   },
