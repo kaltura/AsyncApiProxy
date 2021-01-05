@@ -8,7 +8,7 @@
   },
 
   "server": {
-    "version": "v1.1.1",
+    "version": "v1.2.0",
     "remote_addr_header_salt": "{{ .Values.async.remoteAddrHeaderSalt }}",
     "remote_addr_header_timeout": 120
   },
@@ -26,7 +26,8 @@
 
   "throttle": {
     "messagePerTimePeriod": 10,
-    "timePeriod": 1000
+    "timePeriod": 1000,
+    "httpsHeader": "{{ .Values.async.httpHeader }}"
   },
 
   "handlers": [
