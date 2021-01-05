@@ -27,7 +27,7 @@
   "throttle": {
     "messagePerTimePeriod": 10,
     "timePeriod": 1000,
-    "httpsHeader": "{{ .Values.async.httpHeader }}"
+    "httpsHeader": "{{ .Values.async.httpsHeader }}"
   },
 
   "handlers": [
