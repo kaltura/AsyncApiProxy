@@ -8,11 +8,11 @@
   },
 
   "server": {
-    "version": "v1.2.0",
+    "version": "v1.2.2",
     "remote_addr_header_salt": "{{ .Values.async.remoteAddrHeaderSalt }}",
     "remote_addr_header_timeout": 120,
     "httpsHeader": "{{ .Values.async.httpsHeader }}",
-    "remoteAddrHeader": "{{ .Values.async.kalturaRemoteAddrHeader }}"
+    "remoteAddrHeader": "{{ .Values.async.remoteAddrHeader }}"
   },
 
   "cdn_api_host": {
