@@ -1,8 +1,10 @@
 {
 	"name": "kaltura-async-proxy-server",
-	"description" : "Kaltura Async API Proxy Server",
-	"version": "v1.0.9",
-	"engines" : { "node" : ">=6.10.2" },
+	"description": "Kaltura Async API Proxy Server",
+	"version": "v1.2.2",
+	"engines": {
+		"node": ">=6.10.2"
+	},
 	"license": "AGPLv3",
 	"dependencies": {
 		"config": ">=1.25.1",
